@@ -6,14 +6,14 @@ app.set('view engine','ejs');
 var params = {
     currentPage:10,
     pageCount: 20,
-    pageNum: 8,
+    pageNum: 7,
     startPageNum:1,
     endPageNum:1,
-    hasFirst:true
+    path:'lists?',
+    hasFirst:false
 };
-app.get('/',function(req,res){
+app.get('/lists',function(req,res){
     params.currentPage = req.query.page || 1;
-    console.log(params);
     var data=paging(params);
     console.log(data);
     res.render('index',data);
