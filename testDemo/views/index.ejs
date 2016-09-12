@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+	.page-lists{
+		margin-top: 100px;
+		font-size: 0;
+        text-align: center;
+	}
+	a{
+		text-decoration: none;
+	}
+	a,span{
+		font-size: 18px;
+        padding: 4px 12px;
+        border: 1px solid #e5e5e5;
+        background-color: #fff;
+        color: #4078c0;
+	}
+	span{
+		color: #d3d3d3;
+		cursor: default;
+	}
+	.current{
+		background-color: #4078c0;
+		color: #fff;
+	}
+	a:not(.current):hover{
+		background-color: #e7e7e7;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="page-lists">
+		<% if(pageCount > 1) { %>
+		    <% pageLists.forEach(function(pageList){ %>
+		        <% if(pageList.style.indexOf('disabled') != -1){ %>
+		        <span class="<%= pageList.style %>"><%= pageList.num %></span>
+		        <% } %>
+		        <% if(pageList.style.indexOf('disabled') == -1) { %>
+		        <a href="<%= pageList.path %>" class="<%= pageList.style %>"><%= pageList.num %></a>
+		        <% } %>
+		    <% }) %>
+		<% } %>
+	</div>	
+</body>
+</html>
