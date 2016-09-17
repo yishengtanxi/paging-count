@@ -22,7 +22,7 @@ hasFirst : false
 currentPage: 10,  
 pageCount: 20,  
 pageLists:   [  
-     {num: 'Previous',path: 'lists?page=9',style: 'previous-page '},//如果当前页已是首页或尾页，则上一页下一页及首页尾页style属性会带有' disabled'。 
+     {num: 'Previous',path: 'lists?page=9',style: 'previous-page '},//如果当前页已是首页或尾页，则上一页下一页及首页尾页style属性会带有' disabled'。   
      { num: 1, path: 'lists?page=1', style: '' },  
      { num: '...', path: 'lists?page=3', style: 'left-gap' },  //点击...可一次跳转pageNum个页码  
      { num: 7, path: 'lists?page=7', style: '' },  
